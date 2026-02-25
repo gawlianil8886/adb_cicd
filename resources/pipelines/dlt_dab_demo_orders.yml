@@ -1,0 +1,18 @@
+resources:
+  pipelines:
+    pipeline_dlt_dab_demo_orders:
+      name: dlt_dab_demo_orders
+      libraries:
+        - glob:
+            include: ../pipelines/dlt_dab_demo_orders.sql
+      #schema: $ {resources.schemas.bronze_schema.name}
+      schema: main
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      #catalog: $ {resources.schemas.bronze_schema.catalog_name}
+      catalog: default
+      #catalog: main
+      serverless: true
+      root_path: /Workspace/adb_cicd/resources/pipelines
