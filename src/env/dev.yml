@@ -1,0 +1,9 @@
+#targets:
+  #dev:
+    #permissions:
+      #- group_name: users
+      #  level: CAN_MANAGE
+
+    #presets:
+    #  name_prefix: ${workspace.current_user.short_name}
+      #name_prefix: main

@@ -1,0 +1,27 @@
+bundle:
+  name: DABDemo
+
+include:
+  - src/*.yml
+  - src/env/*.yml
+  - resources/jobs/*.yml
+  - resources/pipelines/*.yml
+  - resources/schemas/*.yml
+
+#permissions:
+  # what ever permission required need to assign here
+  #- group_name: gawlianil8886
+  #  level: CAN_MANAGE
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-f5ad6780-3ace.cloud.databricks.com/
+
+
+  qa:
+    default: false
+    workspace:
+      host: https://dbc-f5ad6780-3ace.cloud.databricks.com/

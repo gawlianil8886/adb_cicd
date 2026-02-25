@@ -1,0 +1,7 @@
+resources:
+  schemas:
+    bronze_schema:
+      #name: "bronze"
+      name: main
+      #catalog_name: ${var.catalog}
+      #catalog_name: default
